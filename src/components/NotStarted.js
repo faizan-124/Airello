@@ -91,19 +91,6 @@ const NotStarted=()=> {
         console.log(selectedItem)
     }
 
-    const onPressEditSave=(id)=>{
-        const items = (() => {
-            const fieldValue = localStorage.getItem('notStarted');
-            return fieldValue === null ? [] : JSON.parse(fieldValue); 
-          })();
-
-       
-          const editedItem = todos.filter((elem, ind)=>{
-            return ind !== selectedItem[0].id;
-        });
-
-        localStorage.setItem("notStarted", JSON.stringify(editedItem))
-    }
   
 
 
@@ -154,8 +141,8 @@ const NotStarted=()=> {
             </textarea>
             {/* <p>{text}</p> */}
             <div style={{flexDirection: 'row', display: 'flex'}}>
-                <a onClick={onPressEditCancel} style={{cursor: "pointer", marginRight: 90}}><p>Cancel</p></a>
-                <a onClick={onPressEditSave} style={{cursor: "pointer", height: 10}}><p>Save</p></a>
+                <a onClick={onPressEditCancel} style={{cursor: "pointer", marginRight: 90}}><p>Close</p></a>
+                
             </div>
         </div>
         ):(null)}
