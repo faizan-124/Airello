@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import NotStarted from './components/NotStarted';
+import InProgress from './components/InProgress';
+import Completed from './components/Completed';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src='/airellologo.svg' width={100}/>
+      <p style={{fontStyle: 'italic', fontWeight: '500'}}>Get things going!</p>
+      {/* <header className="App-header">
+        <h2>Airello</h2>
+      </header> */}
+      <div style={{flexDirection: 'row', display: 'flex', width: '100%', justifyContent: 'center', marginTop: 10}}>
+      <NotStarted/>
+      <InProgress/>
+      <Completed/>
+      </div>
+
     </div>
   );
 }
