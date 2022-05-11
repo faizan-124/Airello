@@ -140,7 +140,7 @@ const Completed=()=> {
             </textarea>
             {/* <p>{text}</p> */}
             <div style={{flexDirection: 'row', display: 'flex'}}>
-                <a onClick={onPressEditCancel} style={{cursor: "pointer", marginRight: 90}}><p>Close</p></a>
+                <a onClick={onPressEditCancel} style={{cursor: "pointer"}}><p>Close</p></a>
                 
             </div>
         </div>
